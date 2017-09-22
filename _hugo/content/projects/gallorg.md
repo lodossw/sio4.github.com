@@ -1,6 +1,9 @@
 ---
 title: GallOrg, Gallery Organizer for Android 1.0.0 released!
-tags: 안드로이드 Gallorg 앱 사진
+slug: gallorg-gallery-organizer-for-android
+tags: ["안드로이드", "Gallorg", "앱", "사진"]
+aliases:
+  - /projects/gallorg.html
 date: 2010-10-06T13:12:26+09:00
 modified: 2010-10-20T16:14:26+09:00
 original: 2010-10-06-gallorg-for-android-1.0.0-released.md
@@ -32,10 +35,9 @@ original: 2010-10-06-gallorg-for-android-1.0.0-released.md
 
 모양은 이렇다.
 
-{:.centered}
 | "공유" 기능 활용 | 기본 폴더 = "오늘" | 다른 앨범 선택 |
 |:----:|:----:|:----:|
-| ![](/attachments/2010-10-06-gallorg-share.png){:width="150px"} | ![](/attachments/2010-10-06-gallorg-default.png){:width="150px"} | ![](/attachments/2010-10-06-gallorg-recent.png){:width="150px"} |
+| ![](/attachments/2010-10-06-gallorg-share.png) | ![](/attachments/2010-10-06-gallorg-default.png) | ![](/attachments/2010-10-06-gallorg-recent.png) |
 
 앞으로 약간의 기능 개선이 있을 예정이지만 일단 공개한다.
 

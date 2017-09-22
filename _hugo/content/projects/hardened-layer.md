@@ -1,5 +1,9 @@
 ---
 title: Hardened Layer
+slug: hardened-layer
+aliases:
+  - /projects/hardened-layer.html
+date: 2016-02-14T00:12:26+09:00
 ---
 **Hardened Layer** is a custom portal for SoftLayer cloud service.
 
