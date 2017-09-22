@@ -1,3 +1,9 @@
 [submodule "assets/vendor/fa"]
 	path = assets/vendor/fa
 	url = https://github.com/FortAwesome/Font-Awesome.git
+[submodule "_hugo/themes/beautifulhugo"]
+	path = _hugo/themes/beautifulhugo
+	url = https://github.com/halogenica/beautifulhugo.git
+[submodule "_hugo/themes/minimal"]
+	path = _hugo/themes/minimal
+	url = https://github.com/calintat/minimal.git
