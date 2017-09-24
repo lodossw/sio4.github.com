@@ -1,0 +1,30 @@
+{{ define "main" }}
+  {{ $data := .Data }}
+
+  <div class="container" role="main">
+    <article class="post-preview">
+			<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 tagcloud">
+
+	{{ if not (eq (len $.Site.Taxonomies.tags) 0) }}
+		{{ $fontUnit := "em" }}
+		{{ $largestFontSize := 2.0 }}
+		{{ $smallestFontSize := 0.9 }}
+		{{ $fontSpread := sub $largestFontSize $smallestFontSize }}
+		{{ $max := len (index $.Site.Taxonomies.tags.ByCount 0).Pages }}
+		{{ $min := len (index $.Site.Taxonomies.tags.ByCount.Reverse 0).Pages }}
+		{{ $spread := sub $max $min }}
+		{{ $fontStep := div $fontSpread $spread }}    
+		{{ range $name, $taxonomy := $.Site.Taxonomies.tags }} 
+			{{ $currentTagCount := len $taxonomy.Pages }}
+			{{ $currentFontSize := (add $smallestFontSize (mul (sub $currentTagCount $min) $fontStep) ) }}
+			<!--Current font size: {{$currentFontSize}}-->
+			<span class="tagdrop" style="font-size:{{$currentFontSize}}{{$fontUnit}}">
+				<a href="{{ $.Site.LanguagePrefix | absURL }}{{ $data.Plural }}/{{ $name | urlize }}">{{ $name }}</a> {{$currentTagCount}}</span>
+		{{ end }}
+
+      </div>
+    </article>
+  </div>
+	{{ end }}
+{{ end }}
+

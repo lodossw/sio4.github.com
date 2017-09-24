@@ -1,0 +1,28 @@
+{{ define "main" }}
+  {{ $data := .Data }}
+  <div class="container" role="main">
+    <article class="post-preview">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      {{ range $key, $value := .Data.Terms.ByCount }}
+				<div>
+        	<h3><a href="{{ $.Site.LanguagePrefix | absURL }}{{ $data.Plural }}/{{ $value.Name | urlize }}/" class="">
+        	{{ range $.Site.Data.categories }}
+          	{{ if eq $value.Name .name }}
+            	{{ .display }}
+          	{{end}}
+        	{{end}}<span class="badge">{{ $value.Count }}</span></a></h3>
+					<ul class="post-related">
+					{{ range first 3 .Pages.ByDate.Reverse }}
+					{{ partial "post-item" . }}
+					{{ end }}
+					</ul>
+					{{ if gt .Pages 2 }}<div>
+						<a href="{{ $.Site.LanguagePrefix | absURL }}{{ $data.Plural }}/{{ $value.Name | urlize }}/" class="">[More...]</a>
+					</div>{{ end }}
+      	</div>
+      {{ end }}
+      </div>
+    </article>
+  </div>
+{{ end }}
+

@@ -1,0 +1,3 @@
+{{ if .Params.tags }}<div class="post-meta post-tags">
+{{ range .Params.tags }}<a class="tag-item" href="{{ $.Site.LanguagePrefix | absURL }}tags/{{ . | urlize }}/">{{ . }}</a>
+{{ end }}</div>{{ end }}

@@ -1,4 +1,103 @@
-baseURL: http://example.org/
-languageCode: en-us
-title: My New Hugo Site
+baseURL: "http://www.sauru.so/"
+DefaultContentLanguage: ko
+#languageCode: ko-kr
+#hasCJKLanguage:   true
+
+title: 소용환의 생각저장소
 theme: beautifulhugo
+publishDir: public
+
+disqusShortname: sauru
+googleAnalytics: "UA-10364127-2"
+
+footnoteAnchorPrefix: "↩"
+footnoteReturnLinkContents: "↩"
+
+permalinks:
+  post: /blog/:slug/
+
+params:
+  favicon: img/favicon.ico
+  logo: /assets/images/profile-256.png
+  rss: true
+  rssurl: http://feeds.feedburner.com/sauru-so
+  dateFormat: 2006-01-02
+  comments: true
+
+  AuthorName: Yonghwan SO
+  GitHubUser: sio4
+  #gcse: "012459888336565318553:uw4f8qygvjm"
+
+  subtitle: Free Software, Cloud Computing, and Troubleshooting
+  bigimg:
+    - src: /assets/images/road.jpg
+  commit: false
+
+#blackfriday:
+#  angledQuotes: true
+#  fractions: false
+#  hrefTargetBlank: false
+#  latexDashes: true
+#  plainIdAnchors: true
+#  extensions: []
+#  extensionmask: []
+
+rssLimit: 30
+
+#taxonomies:
+#  - category:         "categories"
+#  - tag:              "tags"
+
+author:
+  name: "Yonghwan SO"
+  website: "http://www.sauru.so"
+  facebook: "yonghwan.so"
+  googleplus: "+YonghwanSO"
+  github: "sio4"
+  linkedin: "scinix"
+  stackoverflow: "users/1111002/sio4"
+
+menu:
+  main:
+    #- Name: "About"
+    #  Pre: "<i class='fa fa-heart'></i>"
+    #  Weight: 10
+    #  Identifier: "about"
+    #  URL: /about/
+    #- Name: "Blog"
+    #  Pre: "<i class='fa fa-heart'></i>"
+    #  Weight: 21
+    #  Identifier: "post"
+    #  URL: /post/
+    - Name: "Proj"
+      Pre: "<i class='fa fa-heart'></i>"
+      Weight: 25
+      Identifier: "projects"
+      URL: /projects/
+    - Name: "Categories"
+      Pre: "<i class='fa fa-heart'></i>"
+      Weight: 30
+      Identifier: "categories"
+      URL: /categories/
+    - Name: "Tags"
+      Pre: "<i class='fa fa-heart'></i>"
+      Weight: 40
+      Identifier: "tags"
+      URL: /tags/
+  icon:
+    - name: "envelope-o"
+      url: "mailto:me@example.com"
+      weight: 1
+    - name: "github"
+      url: "https://github.com/username/"
+      weight: 2
+    - name: "twitter"
+      url: "https://twitter.com/username/"
+      weight: 3
+    - name: "linkedin"
+      url: "https://www.linkedin.com/in/username/"
+      weight: 4
+    - name: "stack-overflow"
+      url: "https://www.stackoverflow.com/username/"
+      weight: 5
+
